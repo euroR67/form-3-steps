@@ -26,10 +26,10 @@ main {
 
 aside {
     background: rgb(21,102,181);
-    background: linear-gradient(180deg, rgba(21,102,181,1) 42%, rgba(1,73,140,1) 100%);
+    background: linear-gradient(180deg, rgb(15, 91, 167) 42%, rgba(1,73,140,1) 100%);
     padding: 30px;
     color: #fff;
-    width: 30%;
+    width: 35%;
     display: flex;
     flex-direction: column;
 }
@@ -70,6 +70,7 @@ aside div ul li #active {
 
 .side-step-text p:first-child {
     font-weight: 400;
+    font-size: 14px;
 }
 
 .rights {
@@ -104,7 +105,7 @@ aside ul li::before {
     top: 50px;
     width: 2px;
     height: 100%;
-    background-color: #307ec8;
+    background-color: #256aaa;
     z-index: 0;
 }
 
@@ -117,5 +118,124 @@ section {
     background: rgb(224,237,254);
     background: linear-gradient(0deg, rgba(224,237,254,1) 0%, rgba(255,255,240,1) 100%);
     padding: 30px;
-    width: 70%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > div {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .step-info {
+    display: flex;
+    flex-direction: column;
+}
+
+section .step-info > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+section .step-info span {
+    font-size: 13px;
+    color: #959aa9;
+}
+
+section .step-info h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+section .step-info p {
+    font-size: 14px;
+    color: #8c8a8a;
+    text-align: justify;
+}
+
+/* Trait horizontal après .step-info */
+section .step-info::after {
+    content: '';
+    display: block;
+    width: 100%; /* Largeur du trait */
+    height: 1px; /* Épaisseur du trait */
+    background-color: #b9b9b948; /* Couleur du trait */
+    margin-block: 40px;
+}
+
+form .first-last-name {
+    display: flex;
+    gap: 20px;
+}
+
+.first-last-name > div > input {
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 14px;
+}
+
+form input {
+    outline: none;
+    border: 2px solid rgba(180, 179, 179, 0.26);
+    padding: 8px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all .2s ease-out;
+    font-size: 14px;
+}
+
+form input:focus {
+    border-color: #1172cc;
+}
+
+form input:hover {
+    border-color: #1172cc;
+}
+
+.email, .phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.email label, .phone label {
+    margin-block: 10px;
+}
+
+form button {
+    border: none;
+    background-color: #016ed3;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 7px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+form button:hover {
+    background-color: #016dd3d4;
+}
+
+.phone-input {
+    position: relative;
+}
+
+.country-code {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.phone-input input {
+    padding-left: 50px; /* Espace pour l'indicatif pays */
 }
